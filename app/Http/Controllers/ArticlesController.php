@@ -36,7 +36,6 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(request());
         $article = new Article;
         $article->title = request('title');
         $article->img = request('img');
