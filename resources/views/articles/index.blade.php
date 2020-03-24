@@ -13,13 +13,13 @@
                             <p class="card-text">{{ $article->body }}</p>
                             <p class="card-text"><small class="text-muted">by {{ $article->author }}</small></p>
 
-                            <form action="{{route('articles.destroy', $article->id)}}" method="post">
+                            <form action="{{route('articles.destroy', $article)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger float-right ">Delete Article</button>
                             </form>
 
-                            <a href="{{route('articles.edit', $article->id)}}" class="btn btn-info float-right mr-3">Edit Article</a>
+                            <a href="{{route('articles.edit', $article)}}" class="btn btn-info float-right mr-3">Edit Article</a>
 
                         </div>
                     </div>

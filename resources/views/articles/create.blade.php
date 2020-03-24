@@ -13,22 +13,35 @@
         
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" name="title" class="form-control">
+                <input type="text" name="title" class="form-control" value="{{old('title')}}">
+                    @error('title')
+                    <small class="form-text text-danger">{{$message}}</small>
+                    @enderror
+
                 </div>
 
                 <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="text" name="author" class="form-control">
+                    <input type="text" name="author" class="form-control" value="{{old('author')}}">
+                    @error('author')
+                    <small class="form-text text-danger">{{$message}}</small>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                 <label for="body">Body</label>
-                <textarea class="form-control" name="body" rows="5"></textarea>
+                <textarea class="form-control" name="body" rows="5">{{old('body')}}</textarea>
+                @error('body')
+                    <small class="form-text text-danger">{{$message}}</small>
+                @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="img">Image path</label>
-                    <input type="text" name="img" class="form-control">
+                    <input type="text" name="img" class="form-control" value="{{old('img')}}">
+                    @error('img')
+                    <small class="form-text text-danger">{{$message}}</small>
+                    @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Send</button>

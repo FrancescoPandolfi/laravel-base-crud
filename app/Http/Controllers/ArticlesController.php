@@ -26,7 +26,7 @@ class ArticlesController extends Controller
             'title' => 'required|string',
             'img' => 'required|string',
             'body' => 'required|string',
-            'author' => 'required|string'
+            'author' => 'required|alpha'
         ]);
 
         Article::create($validated);
@@ -52,7 +52,7 @@ class ArticlesController extends Controller
             'title' => 'required|string',
             'img' => 'required|string',
             'body' => 'required|string',
-            'author' => 'required|string'
+            'author' => 'required|alpha'
         ]);
 
         $article->update($validated);
@@ -64,7 +64,7 @@ class ArticlesController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
-        
+
         $articles = Article::latest()->get();
 
         return view('articles.index', compact('articles'));
