@@ -26,7 +26,7 @@ class ArticlesController extends Controller
             'title' => 'required|string',
             'img' => 'required|string',
             'body' => 'required|string',
-            'author' => 'required|alpha'
+            'author' => 'required|string'
         ]);
 
         Article::create($validated);
@@ -52,7 +52,7 @@ class ArticlesController extends Controller
             'title' => 'required|string',
             'img' => 'required|string',
             'body' => 'required|string',
-            'author' => 'required|alpha'
+            'author' => 'required|string'
         ]);
 
         $article->update($validated);

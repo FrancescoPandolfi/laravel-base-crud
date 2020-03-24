@@ -13,7 +13,7 @@
         
                 <div class="form-group">
                     <label for="title">Title</label>
-                <input type="text" name="title" class="form-control" value="{{old('title')}}">
+                <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
                     @error('title')
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror
@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="text" name="author" class="form-control" value="{{old('author')}}">
+                    <input type="text" name="author" class="form-control @error('author') is-invalid @enderror" value="{{old('author')}}">
                     @error('author')
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror
@@ -30,7 +30,7 @@
 
                 <div class="form-group">
                 <label for="body">Body</label>
-                <textarea class="form-control" name="body" rows="5">{{old('body')}}</textarea>
+                <textarea class="form-control @error('body') is-invalid @enderror" name="body" rows="5">{{old('body')}}</textarea>
                 @error('body')
                     <small class="form-text text-danger">{{$message}}</small>
                 @enderror
@@ -38,7 +38,7 @@
 
                 <div class="form-group">
                     <label for="img">Image path</label>
-                    <input type="text" name="img" class="form-control" value="{{old('img')}}">
+                    <input type="text" name="img" class="form-control @error('img') is-invalid @enderror" value="{{old('img')}}">
                     @error('img')
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror
