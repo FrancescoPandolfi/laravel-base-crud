@@ -57,8 +57,7 @@ class ArticlesController extends Controller
 
         $article->update($validated);
         return redirect(route('articles.show', $article));
-        
-        
+   
     }
 
     public function destroy(Article $article)

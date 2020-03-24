@@ -4,8 +4,8 @@
         
     <div class="container">
         <div class="row">
-            <div class="col-12">  
                 @foreach ($articles as $article)
+                <div class="col-4"> 
                     <div class="card mb-3">
                         <img class="card-img-top" src="{{ $article->img }}" alt="Card image cap">
                         <div class="card-body">
@@ -23,8 +23,8 @@
 
                         </div>
                     </div>
+                </div>
                 @endforeach
-            </div>
         </div>
     </div>
 
